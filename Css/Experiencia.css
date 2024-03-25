@@ -1,0 +1,137 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  position: relative;
+  background-image: url("../Imagenes/propiedad.jpg");
+  background-size: cover;
+  background-position: 0px;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 100px 30px;
+  text-align: center;
+}
+
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  text-align: right;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0 10px;
+}
+
+nav a:hover {
+  background-color: rgba(124, 116, 111, 0.968);
+}
+
+.Experiencia {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bloque-texto1 {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  background-position: center;
+}
+
+.bloque-texto2 {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  background-position: center;
+}
+
+.Propiedades {
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  background-color: rgb(140, 190, 173);
+}
+
+.table-container {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 80px 20px;
+  }
+
+  nav a {
+    padding: 5px 8px;
+  }
+
+  .bloque-texto1,
+  .bloque-texto2 {
+    flex: 1;
+    margin-right: 0;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  header {
+    padding: 60px 10px;
+  }
+
+  .Propiedades {
+    font-size: 16px;
+  }
+
+  .table th,
+  .table td {
+    padding: 6px;
+  }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../Css/Contactanos.css">
+  <link rel="stylesheet" href="../Paginas/conexion.php">
+
+
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="Home.html">Inicio</a>
+      <a href="AcercaDeMi.html">Quienes somos</a>
+      <a href="Experiencia.html">Experiencia</a>
+      <a href="Servicios.html">Servicios</a>
+      <a href="Contactanos.html">Contactanos</a>
+    </nav>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+          event.preventDefault();
+          if (this.checkValidity()) {
+            alert("¡El formulario se envió correctamente!");
+            this.reset(); 
+            clearValidationMessages(); 
+          } else {
+            event.stopPropagation();
+          }
+          this.classList.add('was-validated');
+        });
+
+        function clearValidationMessages() {
+          var invalidFields = document.querySelectorAll('.was-validated .is-invalid');
+          invalidFields.forEach(function (field) {
+            field.classList.remove('is-invalid');
+          });
+        }
+      });
+
+    </script>
+
+  </header>
+
+  <div class="img-container">
+    <div class="img-list1">
+      <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../Imagenes/cond6.jpeg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../Imagenes/cond7.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../Imagenes/cond9.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../Imagenes/cond10.jpeg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="img-list2">
+      <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../Imagenes/cond1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../Imagenes/cond2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../Imagenes/cond3.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../Imagenes/cond4.jpeg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <p class="text-info-emphasis">Nuestra empresa se especializa en la administración de propiedad horizontal, ofreciendo
+    soluciones integrales y profesionales para la gestión eficiente de comunidades residenciales y edificios. Contamos
+    con un equipo experto en administración de fincas que se encarga de optimizar los recursos, mantener el buen estado
+    de las instalaciones, garantizar la seguridad y promover la convivencia armoniosa entre los propietarios. Desde la
+    gestión financiera y contable hasta la coordinación de servicios y mantenimiento, estamos comprometidos en brindar
+    un servicio de calidad que satisfaga las necesidades específicas de cada comunidad. ¡Contáctanos hoy para conocer
+    cómo podemos ayudarte a mejorar la administración de tu propiedad horizontal!</p>
+
+  <div class="centered-form">
+    <form id="contact-form" class="needs-validation" action="../Js/conexion.php" method="post" novalidate>
+      <h1>Contáctenos</h1>
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
+        <div class="invalid-feedback">Por favor ingrese su nombre.</div>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp"
+          required>
+        <div id="emailHelp" class="form-text">Nunca compartiremos tu correo electrónico con nadie más.</div>
+        <div class="invalid-feedback">Por favor ingrese un correo electrónico válido.</div>
+      </div>
+      <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input type="tel" class="form-control" id="telefono" name="telefono" required>
+        <div class="invalid-feedback">Por favor ingrese su número de teléfono.</div>
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" name="mensaje" rows="5"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+  </div>
+
+
+  <footer>
+    <div class="container">
+      <p>© 2024 Mi Empresa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+  
+</body>
+
+</html>

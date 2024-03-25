@@ -1,0 +1,123 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    position: relative;
+    background-image: url('../Imagenes/propiedad.jpg');
+    background-size: cover;
+    background-position: 0px;
+    background-repeat: no-repeat; 
+    color: #fff;
+    padding: 100px 30px;
+    text-align: center;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 20px;
+    text-align: right;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+nav a:hover {
+    background-color: rgba(124, 116, 111, 0.968);
+}
+
+
+.img-container {
+    display: flex;
+    justify-content: center; 
+    
+}
+
+.carousel-item img {
+    height: 300px; 
+    object-fit: cover; 
+    margin: 30px; 
+}
+
+.carousel-caption h5 {
+    color: rgb(26, 25, 25);
+}
+
+
+.ManejoFinanciero h1, .ManejoOperativo h1, .ManejoAdministrativo h1, .ManejoLegal h1,
+.ManejoFinanciero p, .ManejoOperativo p, .ManejoAdministrativo p, .ManejoLegal p {
+    text-align: center;
+}
+
+
+.accordion-item {
+    background-color: #f8f9fa;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.accordion-header {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.accordion-button {
+    color: #212529;
+    font-weight: bold;
+}
+
+.accordion-body {
+    padding: 10px;
+    text-align: center;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .carousel-item img {
+        height: 200px;
+        margin: 15px; 
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    header {
+        padding: 80px 20px; 
+    }
+
+    nav a {
+        padding: 5px 8px;  
+    }
+
+    .carousel-item img {
+        height: 150px; 
+        margin: 10px; 
+    }
+}
